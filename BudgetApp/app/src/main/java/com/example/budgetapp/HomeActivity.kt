@@ -22,6 +22,30 @@ class HomeActivity : AppCompatActivity() {
         maxSpendingInput = findViewById(R.id.maxSpendingInput)
         saveGoalsButton = findViewById(R.id.saveGoalsButton)
 
+        // Bar chart setup
+        val barChart = findViewById<com.github.mikephil.charting.charts.BarChart>(R.id.barChart)
+        val categories = listOf("Entertainment", "Apparel and services", "Food", "Transportation", "Insurance and pension", "Housing", "Healthcare")
+        val values = listOf(22f, 22f, 13f, 11f, 9f, 6f, 5f)
+        val entries = values.mapIndexed { i, v -> com.github.mikephil.charting.data.BarEntry(i.toFloat(), v) }
+        val dataSet = com.github.mikephil.charting.data.BarDataSet(entries, "Change in spending (2020-2021)").apply {
+            color = android.graphics.Color.parseColor("#4285F4")
+            valueTextColor = android.graphics.Color.BLACK
+            valueTextSize = 14f
+            setDrawValues(true)
+        }
+        val barData = com.github.mikephil.charting.data.BarData(dataSet)
+        barChart.data = barData
+        barChart.setFitBars(true)
+        barChart.description.isEnabled = false
+        barChart.axisLeft.textColor = android.graphics.Color.BLACK
+        barChart.axisRight.isEnabled = false
+        barChart.xAxis.textColor = android.graphics.Color.BLACK
+        barChart.xAxis.valueFormatter = com.github.mikephil.charting.formatter.IndexAxisValueFormatter(categories)
+        barChart.xAxis.granularity = 1f
+        barChart.xAxis.position = com.github.mikephil.charting.components.XAxis.XAxisPosition.BOTTOM
+        barChart.legend.isEnabled = false
+        barChart.invalidate()
+
         // Set up bottom navigation
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNav.setOnItemSelectedListener { item ->
@@ -41,7 +65,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_growth -> {
-                    val intent = Intent(this, SettingsActivity::class.java)
+                    val intent = Intent(this, GrowthActivity::class.java)
                     startActivity(intent)
                     true
                 }

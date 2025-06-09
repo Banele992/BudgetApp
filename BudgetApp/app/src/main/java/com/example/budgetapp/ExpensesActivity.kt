@@ -49,8 +49,16 @@ class ExpensesActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_expenses -> true // Already here
-                R.id.navigation_growth -> true // TODO: Implement navigation
-                R.id.navigation_settings -> true // TODO: Implement navigation
+                R.id.navigation_growth -> {
+                    val intent = Intent(this, GrowthActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.navigation_settings -> {
+                    val intent = Intent(this, SettingsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

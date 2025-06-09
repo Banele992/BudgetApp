@@ -7,6 +7,22 @@
     android:paddingTop="4dp"
     android:paddingBottom="4dp">
 
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_settings_icon"/>
+        <ImageView
+            android:id="@+id/optionIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:tint="#FFFFFF"/>
+    </FrameLayout>
+
     <TextView
         android:id="@+id/optionLabel"
         android:layout_width="wrap_content"
