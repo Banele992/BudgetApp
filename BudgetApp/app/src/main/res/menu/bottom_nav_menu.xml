@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_home"
-        android:icon="@android:drawable/ic_menu_view"
+        android:id="@+id/navigation_home"
+        android:icon="@android:drawable/ic_menu_compass"
         android:title="Home" />
     <item
-        android:id="@+id/nav_categories"
+        android:id="@+id/navigation_categories"
         android:icon="@android:drawable/ic_menu_sort_by_size"
         android:title="Categories" />
     <item
-        android:id="@+id/nav_expenses"
+        android:id="@+id/navigation_expenses"
         android:icon="@android:drawable/ic_menu_agenda"
         android:title="Expenses" />
     <item
-        android:id="@+id/nav_growth"
-        android:icon="@android:drawable/ic_menu_compass"
+        android:id="@+id/navigation_growth"
+        android:icon="@android:drawable/ic_menu_myplaces"
         android:title="Growth" />
     <item
-        android:id="@+id/nav_settings"
+        android:id="@+id/navigation_settings"
         android:icon="@android:drawable/ic_menu_manage"
         android:title="Settings" />
 </menu> 

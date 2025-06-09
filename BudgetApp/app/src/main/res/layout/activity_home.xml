@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:orientation="horizontal"
-        android:background="#8F5CF6"
+        android:background="#000080"
         android:padding="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,165 +22,23 @@
             android:id="@+id/profileImage"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:src="@drawable/logo"
             android:background="@drawable/ic_launcher_background"
             android:scaleType="centerCrop"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="12dp" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
-            <TextView
-                android:text="Welcome"
-                android:textColor="@android:color/white"
-                android:textSize="16sp" />
-            <TextView
-                android:text="Amir 44B"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:textSize="18sp" />
-        </LinearLayout>
+
+
 
         <ImageView
             android:id="@+id/notificationIcon"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@android:drawable/ic_dialog_info"
-            android:tint="@android:color/white"
-            android:layout_gravity="center_vertical" />
+            android:layout_gravity="center_vertical"
+            app:tint="@android:color/white" />
     </LinearLayout>
-
-    <!-- Budget Overview Card -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/budgetOverviewCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="4dp"
-        android:layout_marginTop="-60dp"
-        app:layout_constraintTop_toBottomOf="@id/profileSection"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Budget overview"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/adjustBudget"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Adjust"
-                    android:textColor="#8F5CF6"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:drawableEnd="@android:drawable/ic_menu_edit"
-                    android:paddingStart="8dp"
-                    android:clickable="true"
-                    android:focusable="true" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Monthly budget"
-                android:textColor="#888888"
-                android:textSize="14sp"
-                android:layout_marginTop="12dp" />
-            <TextView
-                android:id="@+id/monthlyBudgetText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$6,000"
-                android:textStyle="bold"
-                android:textSize="22sp"
-                android:layout_marginBottom="8dp" />
-
-            <!-- Chart Placeholder -->
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/budgetPieChart"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp" />
-
-            <TextView
-                android:id="@+id/spentText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$2,335.20 Spent"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="-40dp"
-                android:background="#FFF"
-                android:padding="8dp" />
-
-            <TextView
-                android:id="@+id/leftToSpendText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Left to spend: $3,665.80"
-                android:textColor="#8F5CF6"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp" />
-
-            <!-- Min/Max Goals -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="12dp">
-                <TextView
-                    android:id="@+id/minGoalText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Min: $1,000"
-                    android:textColor="#4CAF50"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:background="#E8F5E9"
-                    android:padding="8dp"
-                    android:layout_marginEnd="8dp" />
-                <TextView
-                    android:id="@+id/maxGoalText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Max: $6,000"
-                    android:textColor="#F44336"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:background="#FFEBEE"
-                    android:padding="8dp" />
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
     <!-- Donut Chart Placeholder -->
     <ImageView
@@ -188,11 +46,113 @@
         android:layout_width="220dp"
         android:layout_height="220dp"
         android:src="@android:drawable/ic_menu_compass"
-        android:tint="#E0E0E0"
         app:layout_constraintTop_toBottomOf="@id/profileSection"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        app:tint="#E0E0E0" />
+
+    <!-- Spending Goals Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/spendingGoalsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/donutChart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spending Goals"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minimum"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="$"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/minSpendingInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maximum"
+                        android:textSize="14sp"
+                        android:textColor="#666666"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="$"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/maxSpendingInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveGoalsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Goals"
+                android:textAllCaps="false"
+                android:layout_marginTop="12dp"
+                app:cornerRadius="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <!-- Expenses Section Title -->
     <TextView
@@ -202,7 +162,7 @@
         android:text="Expenses"
         android:textStyle="bold"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/donutChart"
+        app:layout_constraintTop_toBottomOf="@id/spendingGoalsCard"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp" />
@@ -237,7 +197,7 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:drawable/ic_menu_agenda"
-                android:tint="#FFC107" />
+                app:tint="#FFC107" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -248,7 +208,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="- $120"
+                android:text="- R120"
                 android:textColor="#FF3B30"
                 android:textStyle="bold"
                 android:textSize="16sp" />
@@ -271,7 +231,7 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:drawable/ic_menu_edit"
-                android:tint="#8F5CF6" />
+                app:tint="#8F5CF6" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -304,7 +264,7 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:drawable/ic_menu_compass"
-                android:tint="#FF3B30" />
+                app:tint="#FF3B30" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

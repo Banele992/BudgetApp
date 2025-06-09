@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2F1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Date (for now, just show today's date) -->
+        <TextView
+            android:id="@+id/expenseDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select date"
+            android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+            android:drawablePadding="8dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Amount -->
+        <EditText
+            android:id="@+id/expenseAmountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Category Spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B2DFDB"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/expenseNotesInput"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Enter description"
+            android:background="#B2DFDB"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Add Receipt Button -->
+        <Button
+            android:id="@+id/addReceiptBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD RECEIPT"
+            android:backgroundTint="#000080"
+            android:textColor="#FFFF"
+            android:textAllCaps="true"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Add Expense Button -->
+        <Button
+            android:id="@+id/addExpenseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD EXPENSE"
+            android:backgroundTint="#000080"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="true"
+            android:padding="14dp"/>
+
+    </LinearLayout>
+</ScrollView> 
