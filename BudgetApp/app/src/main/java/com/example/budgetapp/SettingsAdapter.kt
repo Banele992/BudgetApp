@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class SettingsAdapter(
-    private val options: List<SettingsOption>
+    private val options: List<SettingsOption>,
+    private val onOptionClick: (SettingsOption) -> Unit
 ) : RecyclerView.Adapter<SettingsAdapter.SettingsViewHolder>() {
 
     data class SettingsOption(val label: String, val iconRes: Int)
@@ -23,6 +24,7 @@ class SettingsAdapter(
         val option = options[position]
         holder.label.text = option.label
         holder.icon.setImageResource(option.iconRes)
+        holder.itemView.setOnClickListener { onOptionClick(option) }
     }
 
     override fun getItemCount(): Int = options.size

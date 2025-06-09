@@ -30,6 +30,9 @@
         <activity android:name=".AddExpenseActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".GrowthActivity" />
+        <activity android:name=".AccountsActivity" />
+        <activity android:name=".AddAccountActivity" />
+        <activity android:name=".ProfileActivity" />
     </application>
 
 </manifest>

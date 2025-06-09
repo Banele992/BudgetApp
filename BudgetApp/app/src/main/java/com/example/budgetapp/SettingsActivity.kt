@@ -13,7 +13,7 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
 
         val options = listOf(
-            SettingsAdapter.SettingsOption("Notifications", R.drawable.ic_notifications),
+            SettingsAdapter.SettingsOption("Profile", R.drawable.ic_profile),
             SettingsAdapter.SettingsOption("Privacy", R.drawable.ic_privacy),
             SettingsAdapter.SettingsOption("Security", R.drawable.ic_security),
             SettingsAdapter.SettingsOption("Chat", R.drawable.ic_chat),
@@ -26,7 +26,15 @@ class SettingsActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.settingsRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = SettingsAdapter(options)
+        recyclerView.adapter = SettingsAdapter(options) { option ->
+            if (option.label == "Profile") {
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+            } else if (option.label == "Account") {
+                val intent = Intent(this, AccountsActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
         val bottomNav = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNavigationView)
         bottomNav.selectedItemId = R.id.navigation_settings
