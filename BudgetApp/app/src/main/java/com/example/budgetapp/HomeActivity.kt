@@ -41,12 +41,13 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_growth -> {
-                    val intent = Intent(this, GrowthActivity::class.java)
+                    val intent = Intent(this, SettingsActivity::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.navigation_settings -> {
-                    // TODO: Navigate to settings
+                    val intent = Intent(this, SettingsActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 else -> false

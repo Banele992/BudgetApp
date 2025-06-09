@@ -28,6 +28,8 @@
         <activity android:name=".AddCategoryActivity" />
         <activity android:name=".ExpensesActivity" />
         <activity android:name=".AddExpenseActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".GrowthActivity" />
     </application>
 
 </manifest>
